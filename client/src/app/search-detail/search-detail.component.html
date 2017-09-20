@@ -1,0 +1,27 @@
+
+ 
+<div *ngIf="search">
+        <div id="poster_path" class="card">
+          
+          <a href="{{search.poster_path}}" target="blank">
+             <img class="card-img-top" src="http://image.tmdb.org/t/p/w300/{{search.poster_path}}" width="20%"></a>
+          <div class="card-block">
+              <h4 class="card-title mt-3">{{search.title}}</h4>
+              <div class="meta card-text">
+                  <a>Rating:{{search.vote_average}}</a>
+              </div>
+              <!-- <div class="card-text">
+              <p class="lead">{{new.description.slice(0,100)}} </p>
+                    <a href="{{new.url}}"> Link to {{new.name}} website  </a>
+             
+              </div> -->
+          </div>
+                    <div class="card-footer">
+              <small>Release Date:{{search.release_date}}</small>
+              <button class="btn btn-info float-right btn-sm"  (click)=addcontent(search)>Favourite List</button>
+          </div>
+        </div>
+        
+</div>
+      
+   

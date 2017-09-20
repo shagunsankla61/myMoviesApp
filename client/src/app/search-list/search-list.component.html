@@ -1,0 +1,12 @@
+
+   <div class="container">
+      <div class="col-md-12">
+
+     <div class="container col-sm-4 col-sm-4" *ngFor=" let search of ref.results |  paginate: { itemsPerPage: 9, currentPage: p }" class="text-align:left">
+
+<app-search-detail [search]="search"></app-search-detail>
+      </div>
+      </div>
+       <pagination-controls (pageChange)="p = $event"></pagination-controls>
+      </div>
+     
